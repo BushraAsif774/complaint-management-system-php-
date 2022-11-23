@@ -107,20 +107,79 @@ figure {
   opacity: 1 !important;
 }
 
+
+/* Animation 1 */
+.own-animateh1{
+  color: #ffff;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer
+}
+.own-animateh1 span{
+  transition: .5s linear
+}
+.own-animateh1:hover span:nth-child(1){
+  margin-right: 5px
+}
+.own-animateh1:hover span:nth-child(1):after{
+  content: "'";
+}
+.own-animateh1:hover span:nth-child(2){
+  margin-left: 30px
+}
+.own-animateh1:hover span{
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff, 
+               0 0 40px #fff;
+}
+
+
+/* Animation 2 */
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
 video {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+  /* min-width: 5%; 
+  min-height: 50%; */
+
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 #video:after {
   content: '';
   opacity: 0.75;
-  background: #4096ee; 
+  /* background: #4096ee; 
   background: -moz-linear-gradient(top, #141d14 0%, #39ced6 100%); 
   background: -webkit-linear-gradient(top, #241c14 0%,#373833 100%); 
-  background: linear-gradient(to bottom, rgba(10, 52, 55, 0.029, 0.864) 0%,#021415 100%); 
+  background: linear-gradient(to bottom, rgba(10, 52, 55, 0.029, 0.864) 0%,#021415 100%);  */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#39ced6',GradientType=0 ); 
   position:fixed;
   left:0;
